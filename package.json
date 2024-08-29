@@ -1,10 +1,10 @@
 {
-  "name": "@maizi/img-cli",
+  "name": "mz-img-cli",
   "version": "1.0.0",
   "description": "A CLI tool for processing images, including conversion, compression, and renaming.",
   "main": "src/index.js",
   "bin": {
-    "@maizi/img-cli": "src/index.js"
+    "mz-img-cli": "src/index.js"
   },
   "scripts": {
     "start": "node src/index.js",

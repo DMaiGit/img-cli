@@ -126,7 +126,7 @@
     "path": "D:\\project\\images-tool-cli\\node_modules\\@inquirer\\type",
     "licenseFile": "D:\\project\\images-tool-cli\\node_modules\\@inquirer\\type\\LICENSE"
   },
-  "@maizi/img-cli@1.0.0": {
+  "mz-img-cli@1.0.0": {
     "licenses": "ISC",
     "publisher": "MaiZ",
     "email": "scxiaoxu0909@163.com",

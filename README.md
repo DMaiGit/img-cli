@@ -1,4 +1,4 @@
-# @maizi/img-cli
+# mz-img-cli
 
 A CLI tool for processing images, including conversion, compression, and renaming.
 
@@ -7,19 +7,19 @@ A CLI tool for processing images, including conversion, compression, and renamin
 You can use npx to execute this CLI tool directly without installing it globally.
 
 ```bash
-npx @maizi/img-cli
+npx mz-img-cli
 ```
 
 Or you can install it globally:
 
 ```bash
-npm install -g @maizi/img-cli
+npm install -g mz-img-cli
 ```
 
 ### Usage
 
 ```bash
-npx @maizi/img-cli [directory] [options]
+npx mz-img-cli [directory] [options]
 ```
 
 ### Options
@@ -35,19 +35,19 @@ npx @maizi/img-cli [directory] [options]
 Convert all images in a directory to JPEG format with a width of 800 pixels and a height of 600 pixels:
 
 ```bash
-npx @maizi/img-cli /path/to/images -w 800 -h 600 -f jpeg -q 0.7
+npx mz-img-cli /path/to/images -w 800 -h 600 -f jpeg -q 0.7
 ```
 
 Convert all images to WebP format while maintaining original dimensions:
 
 ```bash
-npx @maizi/img-cli /path/to/images -f webp -q 0.5
+npx mz-img-cli /path/to/images -f webp -q 0.5
 ```
 
 Process all images in the current directory with default settings:
 
 ```bash
-npx @maizi/img-cli
+npx mz-img-cli
 ```
 
 ### License

@@ -1,4 +1,4 @@
-# @maizi/img-cli
+# mz-img-cli
 
 一个用于处理图像文件的CLI工具，包括转换、压缩和重命名。
 
@@ -7,19 +7,19 @@
 你可以使用 npx 直接执行这个 CLI 工具，而无需全局安装。
 
 ```bash
-npx @maizi/img-cli
+npx mz-img-cli
 ```
 
 或者你可以全局安装它：
 
 ```bash
-npm install -g @maizi/img-cli
+npm install -g mz-img-cli
 ```
 
 ### 使用
 
 ```bash
-npx @maizi/img-cli [directory] [options]
+npx mz-img-cli [directory] [options]
 ```
 
 ### 选项
@@ -35,19 +35,19 @@ npx @maizi/img-cli [directory] [options]
 将目录中的所有图片转换为JPEG格式，宽度为800像素，高度为600像素：
 
 ```bash
-npx @maizi/img-cli /path/to/images -w 800 -h 600 -f jpeg -q 0.7
+npx mz-img-cli /path/to/images -w 800 -h 600 -f jpeg -q 0.7
 ```
 
 将所有图片转换为WebP格式，保持原始尺寸：
 
 ```bash
-npx @maizi/img-cli /path/to/images -f webp -q 0.5
+npx mz-img-cli /path/to/images -f webp -q 0.5
 ```
 
 处理当前目录中的所有图片，使用默认设置：
 
 ```bash
-npx @maizi/img-cli
+npx mz-img-cli
 ```
 
 ### 许可证
