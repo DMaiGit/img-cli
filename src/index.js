@@ -9,7 +9,7 @@ import * as emoji from 'node-emoji';
 
 const program = new Command();
 program
-  .name('mz-img-cli')
+  .name('mz-img-tools')
   .description(chalk.blue('一个CLI工具，用于处理图像文件，包括转换、压缩和重命名') + ` ${emoji.get('camera')}`)
   .argument('[directory]', chalk.green('图片文件夹路径，默认为当前目录'))
   .option('-o, --output <directory>', chalk.green('指定输出目录 (可选)'))
@@ -25,11 +25,11 @@ program
   .on('--help', () => {
     console.log('\n' + chalk.yellow('使用示例:'));
     console.log(`  转换文件夹中的所有图片，设置宽高为800x600，并转换为JPEG格式:`);
-    console.log(`    $ mz-img-cli /path/to/images -w 800 -h 600 -f jpeg -q 0.7 ${emoji.get('sparkles')}`);
+    console.log(`    $ mz-img-tools /path/to/images -w 800 -h 600 -f jpeg -q 0.7 ${emoji.get('sparkles')}`);
     console.log(`  仅转换为WebP格式，保持原始尺寸:`);
-    console.log(`    $ mz-img-cli /path/to/images -f webp -q 0.5 ${emoji.get('sparkles')}`);
+    console.log(`    $ mz-img-tools /path/to/images -f webp -q 0.5 ${emoji.get('sparkles')}`);
     console.log(`  处理当前目录中的所有图片，使用默认设置:`);
-    console.log(`    $ mz-img-cli ${emoji.get('sparkles')}`);
+    console.log(`    $ mz-img-tools ${emoji.get('sparkles')}`);
   });
 
 program.parse(process.argv);
@@ -110,8 +110,9 @@ async function processImages(directory, options) {
       // WebP的质量参数传递
       const finalBuffer = await sharp(pngBuffer)
         .toFormat(targetFormat, { 
-          quality: targetFormat === 'jpeg' ? quality : (targetFormat === 'webp' ? qualityThreshold * 100 : undefined), // 对JPEG和WebP设置质量
-          lossless: targetFormat === 'webp' && qualityThreshold === 1 // 仅在质量为1时进行无损
+          // quality: targetFormat === 'jpeg' ? quality : (targetFormat === 'webp' ? qualityThreshold * 100 : undefined), // 对JPEG和WebP设置质量
+          quality: quality, // 对JPEG和WebP设置质量
+          lossless: qualityThreshold === 1 // 仅在质量为1时进行无损
         })
         .toBuffer();
 
