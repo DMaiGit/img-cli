@@ -17,6 +17,10 @@
     "compression",
     "sharp"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DMaiGit/img-cli.git"
+  },
   "author": "MaiZ <scxiaoxu0909@163.com>",
   "license": "ISC",
   "type": "module",
